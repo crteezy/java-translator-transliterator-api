@@ -27,25 +27,25 @@ public class Main {
 
 			String originalLocale = GoogleTranslate.detectLanguage(originalText);
 
-			System.out.println("Original Locale : " + originalLocale);
-			System.out.println("Original Text : " + originalText);
+			System.out.println("Original Locale\t: " + originalLocale);
+			System.out.println("Original Text\t: " + originalText);
 			String unicodeCodes = StringEscapeUtils.escapeJava(originalText);
-			System.out.println("Unicode codes : " + unicodeCodes);
+			System.out.println("Unicode codes\t: " + unicodeCodes);
 			
 			
 			System.out.println();
 			
 			// Translator
-			System.out.println("Translated : " + GoogleTranslate.translate("en", originalText));
+			System.out.println("Translated\t: " + GoogleTranslate.translate("en", originalText));
 
 			// Transliterator
 			Transliterator transliterator = Transliterator.getInstance(LANGUAGE_COMBINATION);
 			String result1 = transliterator.transliterate(originalText);
-			System.out.println("Transliterated : " + result1);
+			System.out.println("Transliterated\t: " + result1);
 			
 			Transliterator transliteratorNoAccent = Transliterator.getInstance(LANGUAGE_COMBINATION_NO_ACCENTS);
 			String result2 = transliteratorNoAccent.transliterate(originalText);
-			System.out.println("Transliterated (no accents) : " + result2);
+			System.out.println("No accents\t: " + result2);
 			
 		} catch (IOException e) {
 			e.printStackTrace();

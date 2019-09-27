@@ -21,7 +21,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String originalText = "오늘의 좋은 글";
+		String originalText = "سامي الغامدي";//오늘의 좋은 글
 
 		try {
 
